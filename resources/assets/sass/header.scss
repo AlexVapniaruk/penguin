@@ -1,0 +1,17 @@
+.header {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: #eee;
+  box-shadow: 0 2px 3px #666;
+  .logo {
+    font-size: 120%;
+    cursor: pointer;
+  }
+  .menu {
+    text-align: right;
+    .menu-item {
+      cursor: pointer;
+      padding: 0 10px;
+    }
+  }
+}

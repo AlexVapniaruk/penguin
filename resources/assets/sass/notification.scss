@@ -1,0 +1,30 @@
+.errors-wrapper {
+  height: auto;
+  width: 300px;
+  right: 5%;
+  top: 72px;
+  border: none;
+  position: fixed;
+  z-index: 9999;
+  .error-block {
+    border: none;
+    box-shadow: 0 0 3px #858585;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    z-index: 9999;
+    svg {
+      background: #fff;
+      width: 20px;
+      height: 20px;
+      color: #333;
+      border-radius: 50%;
+      font-size: 15px;
+    }
+  }
+}

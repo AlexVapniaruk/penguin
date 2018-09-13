@@ -10471,9 +10471,60 @@ a.text-dark:focus {
   }
 }
 
-.navbar-laravel {
-  background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.header {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: #eee;
+  -webkit-box-shadow: 0 2px 3px #666;
+          box-shadow: 0 2px 3px #666;
+}
+
+.header .logo {
+  font-size: 120%;
+  cursor: pointer;
+}
+
+.header .menu {
+  text-align: right;
+}
+
+.header .menu .menu-item {
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.errors-wrapper {
+  height: auto;
+  width: 300px;
+  right: 5%;
+  top: 72px;
+  border: none;
+  position: fixed;
+  z-index: 9999;
+}
+
+.errors-wrapper .error-block {
+  border: none;
+  -webkit-box-shadow: 0 0 3px #858585;
+          box-shadow: 0 0 3px #858585;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.errors-wrapper .close {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 9999;
+}
+
+.errors-wrapper .close svg {
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  color: #333;
+  border-radius: 50%;
+  font-size: 15px;
 }
 
