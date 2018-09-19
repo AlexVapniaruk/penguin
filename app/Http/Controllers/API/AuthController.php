@@ -34,8 +34,17 @@ class AuthController extends Controller
         return response()->json(['status' => 201]);
     }
 
-    public function login()
+    public function login(Request $request)
     {
+        $validatedData = $request->validate([
+            'email' => 'email|required|string|max:255',
+            'password' => 'required|string|min:6|max:255',
+        ], [
+                'unique' => 'Email must be unique',
+                'email' => 'Email address not valid.',
+                'required' => 'This field must be required']
+        );
+
         $client = DB::table('oauth_clients')
             ->where('password_client', true)
             ->first();
@@ -44,7 +53,7 @@ class AuthController extends Controller
             'grant_type' => 'password',
             'client_id' => $client->id,
             'client_secret' => $client->secret,
-            'username' => request('username'),
+            'username' => request('email'),
             'password' => request('password'),
         ];
 

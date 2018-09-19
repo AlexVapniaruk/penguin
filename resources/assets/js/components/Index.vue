@@ -17,6 +17,12 @@
         components: {
             'main-header': MainHeader,
             'notification': Notification
+        },
+        created(){
+            let token = localStorage.getItem('user-token')
+            if(token){
+
+            }
         }
     }
 </script>

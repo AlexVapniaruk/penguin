@@ -26,12 +26,16 @@ const actions = {
         commit('removeQuestion')
     },
     addError({commit}, error) {
+        let seconds = 5
+        if(error.seconds){
+            seconds = error.seconds
+        }
         setTimeout(() => {
             commit('addError', error)
         }, 100)
         setTimeout(() => {
             commit('removeErrors')
-        }, 5000)
+        }, seconds*1000)
     },
     addQuestion({commit}, question) {
         commit('addQuestion', question)

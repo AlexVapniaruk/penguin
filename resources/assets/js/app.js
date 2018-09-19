@@ -1,4 +1,5 @@
 require('./bootstrap');
+require('./tokens');
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
@@ -31,3 +32,4 @@ const app = new Vue({
     store: store,
     render: h => h(App),
 });
+
